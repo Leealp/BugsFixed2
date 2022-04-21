@@ -1,0 +1,35 @@
+{
+    "articles":[
+        {
+            "slug":"article-2-ifrlru",
+            "title":"Article 2",
+            "description":"A2",
+            "body":"Article A2",
+            "createdAt":"2021-10-15T21:56:52.873Z",
+            "updatedAt":"2021-10-15T21:56:52.873Z","tagList":[],
+            "favorited":false,
+            "favoritesCount":1,
+            "author":{
+                "username":"elphe",
+                "bio":null,
+                "image":"https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following":false}},
+        {
+            "slug":"article-1-s230rg",
+            "title":"Article 1",
+            "description":"A1",
+            "body":"Article A1",
+            "createdAt":"2021-10-15T21:56:20.245Z",
+            "updatedAt":"2021-10-15T21:56:20.245Z",
+            "tagList":[],
+            "favorited":false,
+            "favoritesCount":5,
+            "author":{
+                "username":"elphe",
+                "bio":null,
+                "image":"https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following":false
+            }}
+    ],
+    "articlesCount":2
+}

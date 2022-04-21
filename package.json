@@ -1,0 +1,77 @@
+{
+  "name": "conduit-node",
+  "version": "1.0.0",
+  "description": "conduit on node",
+  "main": "app.js",
+  "scripts": {
+    "back-test": "NODE_ENV=test npm run dev",
+    "build": "./bin/sync-db.js && next build",
+    "build-dev": "./bin/sync-db.js && NODE_ENV_OVERRIDE=development npm run build",
+    "deploy": "git push -f heroku-next next:master",
+    "dev": "NODE_OPTIONS='--unhandled-rejections=strict' nodemon ./app.js",
+    "start": "node --unhandled-rejections=strict ./app.js",
+    "start-dev": "cross-env NODE_ENV_OVERRIDE=development NODE_ENV_NEXT=production node --unhandled-rejections=strict ./app.js",
+    "start-prod": "env $(cat .env | xargs) NODE_ENV=production DATABASE_URL='postgres://node_express_sequelize_realworld_user:a@localhost:5432/node_express_sequelize_realworld' npm start",
+    "test": "mocha test --ignore-leaks test.js",
+    "test-api": "./realworld/api/run-api-tests.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gothinkster/productionready-node-api.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/gtag.js": "0.0.7",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "commander": "6.2.1",
+    "cors": "2.7.1",
+    "cross-env": "^7.0.3",
+    "errorhandler": "1.4.3",
+    "express": "^4.17.3",
+    "express-jwt": "^6.1.1",
+    "express-session": "^1.17.2",
+    "ionicons": "2.0.1",
+    "jsonwebtoken": "^7.2.0",
+    "marked": "^4.0.14",
+    "method-override": "^2.3.10",
+    "methods": "1.1.2",
+    "morgan": "^1.7.0",
+    "next": "^12.1.5",
+    "passport": "0.3.2",
+    "passport-local": "1.0.0",
+    "pg": "8.5.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "request": "^2.88.2",
+    "sass": "1.34.0",
+    "sequelize": "^6.19.0",
+    "slug": "^0.9.4",
+    "swr": "0.3.0",
+    "termit": "0.4.4",
+    "typescript": "3.9.7"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@types/node": "14.0.27",
+    "@types/react": "16.9.44",
+    "cypress": "^8.7.0",
+    "eslint": "7.11.0",
+    "eslint-plugin-prettier": "2.6.0",
+    "mocha": "^6.2.3",
+    "newman": "^5.3.2",
+    "nodemon": "^1.19.4",
+    "prettier": "1.12.1",
+    "sqlite3": "^4.2.0",
+    "typescript": "3.9.7"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}
